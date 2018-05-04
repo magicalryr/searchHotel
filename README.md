@@ -1,5 +1,5 @@
 # searchHotel
-###python抓取去哪网当天的酒店信息
+### python抓取去哪网当天的酒店信息
 
 . 主要内容
 > 环境准备
@@ -9,27 +9,38 @@
 
 #### 环境准备
 ‘’‘
+
 安装selenium
 sudo pip install selenium
+
 ’‘’
 selenium2.x 调用高版本浏览器会出现不兼容问题，调用低版本浏览器正常
 selenium3.x 调用浏览器必须下载一个类似不定的文件，比如firefox的geckodriver，chrome的chromedriver
 各个浏览器的补丁[下载地址:](http://www.seleniumhq.org/download/)
 
 ‘’‘
+
 安装 BeautifulSoup
 sudo pip install BeautifulSoup
+
 ’‘’
 
 #### selenium 使用
 注意事项：
+
 '''
+
 from selenium import webdriver
 dr = webdriver.Firefox()
+
 '''
+
 如果运行报错，提示geckodriver(或者其他浏览器对应的补丁)必须在‘PATH’,添加对应的路径到环境变量中，重启，如果还报错，改用下列写法
+
 '''
+
 dr = webdriver.Firefox(execute_path=r"/Users/software/chromedriver.exe")
+
 '''
 
 #### 数据抓取
